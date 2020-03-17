@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org"
+      xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<head>
+    <meta charset="UTF-8"/>
+    <title>用户管理</title>
+    <!--<link rel="stylesheet" th:href="@{http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css}">-->
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+
+</head>
+<body>
+
+<h1><span class="label label-danger">认证失败</span></h1>
+
+<a th:href="@{/login}">
+    <button th:id="loginbtn" type="button" class="btn btn-success btn-lg">重新登录</button>
+</a>
+
+
+</body>
+
+</html>

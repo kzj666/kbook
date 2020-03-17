@@ -4,6 +4,7 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.kk.entity.User;
 import com.kk.service.UserService;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -46,6 +47,7 @@ public class UserController {
      * @return
      */
     @GetMapping("/selectList")
+//    @RequiresPermissions("user:list")
     public String  selectList(Model model, @RequestParam(value = "pn",defaultValue = "1") Integer pn, @RequestParam(value = "size", defaultValue = "5") int size){
         //pn是要显示的页数，默认值设置为1，显示记录数为5条
         PageHelper.startPage(pn, size);
@@ -60,6 +62,7 @@ public class UserController {
      * 查询全部记录
      * @return 返回对象列表
      */
+    @ResponseBody
     @GetMapping("/selectAll")
     public List<User> selectAll(){
         return this.userService.queryAll();

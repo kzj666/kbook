@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org"
+      xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
 <head>
     <meta charset="UTF-8"/>
     <title>用户管理</title>
@@ -84,6 +85,21 @@
             </li>
         </ul>
     </nav>
+</div>
+
+<!--有user:list权限才能显示-->
+<div shiro:hasPermission="user:list" align="center">
+    <h1><span class="label label-success">list</span></h1>
+</div>
+
+<!--有user:kk权限才能显示-->
+<div shiro:hasPermission="user:kk" align="center">
+    <h1><span class="label label-success">kk</span></h1>
+</div>
+
+<!--有user:jj权限才能显示-->
+<div shiro:hasPermission="user:jj" align="center">
+    <h1><span class="label label-success">jj</span></h1>
 </div>
 
 </html>

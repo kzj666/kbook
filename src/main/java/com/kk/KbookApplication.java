@@ -7,7 +7,7 @@ import org.springframework.boot.web.servlet.ServletComponentScan;
 
 @SpringBootApplication
 @MapperScan("com.kk.dao")
-@ServletComponentScan(basePackages = "com.kk.filter")
+//@ServletComponentScan(basePackages = "com.kk.filter")
 public class KbookApplication {
 
 	public static void main(String[] args) {
